@@ -1,0 +1,71 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding-top: 60px;
+
+  h1 {
+    padding-bottom: 15px;
+  }
+
+  h3 {
+    position: relative;
+  }
+
+  h3::after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 0.2rem;
+    background-color: $red;
+    top: 39px;
+    left: 0;
+    transition: all .7s;
+  }
+
+  h3:hover::after {
+    width: 3.6rem
+  }
+
+  a {
+    position: relative;
+    color: royalblue;
+    overflow: hidden;
+    background: linear-gradient(to right, $green, $green 50%, $red 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position .3s ease;
+  }
+
+  a:hover {
+    background-position: 0 100%;
+  }
+
+  &_about {
+    padding-bottom: 15px;
+
+    p {
+      line-height: 1.2rem;
+    }
+  }
+
+  &_technologies {
+    padding-top: 15px;
+
+    img {
+      margin: 12px;
+      width: 75px;
+      transition: all 1s;
+    }
+
+    img:hover {
+      transform: rotate(360deg);
+    }
+
+    &_content {
+      padding-bottom: 40px;
+    }
+  }
+}

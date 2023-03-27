@@ -1,0 +1,31 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  padding-top: 60px;
+  text-align: center;
+
+  &_header {
+    span, h1  {
+      font-family: $sono;
+      display: inline-block;
+      font-size: 4rem;
+      animation: color 3s infinite;
+    }
+
+    strong {
+      color: $red;
+    }
+  }
+}
+
+@keyframes color {
+  0% {
+    color: $red;
+  }
+  50% {
+    color: $light;
+  }
+  100%{
+    color: $red;
+  }
+}

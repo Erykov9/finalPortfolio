@@ -1,0 +1,109 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  width: 100%;
+  padding-bottom: 15px;
+  background-color: $dark-purple;
+
+  &_navItems {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    background-color: $dark-purple;
+
+    a {
+      padding: 20px;
+      background-color: $dark-purple;
+
+    }
+
+    a::after {
+      content: '';
+      display: block;
+      width: 0;
+      top: 5px;
+      height: 2px;
+      background: $red;
+      transition: width .5s;
+    }
+
+    a:hover::after {
+      width: 100%;
+    }
+
+    /* section one */
+    &_one {
+      display: flex;
+      position: relative;
+      background-color: $dark-purple;
+
+
+      span {
+        cursor: pointer;
+        padding: 20px;
+        margin: 0px;
+        background-color: $dark-purple;
+
+      }
+
+      span::after {
+        content: '';
+        display: block;
+        width: 0;
+        top: 5px;
+        height: 2px;
+        background: $red;
+        transition: width .5s;
+      }
+
+      span:hover::after {
+        width: 100%;
+      }
+
+      /* dropdown */
+      &_dropdown {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 60%;
+        top: 170px;
+        left: 87%;
+        transform: translate(-50%, -50%);
+        background-color: $dark-purple;
+        border: 1px solid black;
+
+        a {
+          background-color: inherit;
+          border: none;
+          margin: 0;
+        }
+
+        a:hover {
+          background-color: $red;
+        }
+
+        a:hover::after {
+          width: 0;
+        }
+      }
+    }
+
+    /* section two */
+    &_two  {
+      display: flex;
+      padding: 20px;
+      background-color: $dark-purple;
+
+      a {
+        svg {
+          background-color: $dark-purple;
+        }
+      }
+    }
+  }
+}
+
+.none {
+  display: none;
+}
