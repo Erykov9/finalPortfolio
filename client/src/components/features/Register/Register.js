@@ -6,7 +6,6 @@ import Spinner from 'react-bootstrap/Spinner';
 
 import Button from '../../common/Button/Button';
 
-
 import { useState } from 'react';
 import axios from  'axios';
 import { useNavigate } from 'react-router-dom';
@@ -17,11 +16,13 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
   const [redirect, setRedirect] = useState(3)
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const port = (process.env.NODE_ENV === 'production') ? '/api/users' : 'http://localhost:8000/api/users'
 
   const configuration = {
     method: "post",
-    url: 'http://localhost:8000/api/users/',
+    url: port,
     data: {
       username,
       password,
