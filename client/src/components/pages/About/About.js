@@ -41,7 +41,7 @@ const About = () => {
             <div>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt='html logo'/>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt='css logo'/>
-              These two gentlemen neen no introduction.
+              These two gentlemen need no introduction.
             </div>
           </div>
         </div>

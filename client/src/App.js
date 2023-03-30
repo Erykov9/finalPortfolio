@@ -6,6 +6,7 @@ import About from "./components/pages/About/About";
 import Contact from "./components/pages/Contact/Contact";
 import Login from "./components/features/Login/Login";
 import Calculator from "./components/features/Calculator/Calculator";
+import PasswordGenerator from "./components/features/PasswordGenerator/PasswordGenerator";
 
 import { Container, Row } from 'react-bootstrap';
 import { useRoutes } from "react-router-dom";
@@ -35,6 +36,10 @@ function App() {
     {
       path: '/calculator',
       element: <Calculator/>
+    },
+    {
+      path: '/passwordgen',
+      element: <PasswordGenerator/>
     }
   ])
   return (

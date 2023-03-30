@@ -129,7 +129,7 @@ const Calculator = () => {
 
           {/** values */}
           <div className={styles.root_calculator_values}>
-            {[1,2,3,4,5,6,7,8,9].map(e  => <div className={styles.root_calculator_values_value} key={e} value={e} onClick={() => valueConverter(e)}><h3>{e}</h3></div>)}
+            {[1,2,3,4,5,6,7,8,9,0].map(e  => <div className={styles.root_calculator_values_value} key={e} value={e} onClick={() => valueConverter(e)}><h3>{e}</h3></div>)}
           </div>
 
           {/** operators */}

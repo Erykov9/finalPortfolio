@@ -40,10 +40,10 @@ const Navi = () => {
           </div> 
         </div>
         {/* section for register/login */}
-        <div className={styles.root_navItems_two}>
+        {/* <div className={styles.root_navItems_two}>
           <NavLink to={'/register'}><BsPersonAdd/> Register</NavLink>
           <NavLink to={'/login'}><AiOutlineLogin/> Login</NavLink>
-        </div>
+        </div> */}
       </div>
     </div>
   )
