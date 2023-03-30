@@ -29,7 +29,7 @@
     "start:server": "nodemon server.js",
     "start:client": "cd client && yarn start",
     "build": "npm-run-all -l -p build:*",
-    "build:server": "nodemon server.js",
+    "build:server": " yarn && nodemon server.js",
     "build:client": "cd client && yarn && yarn build"
   }
 }
