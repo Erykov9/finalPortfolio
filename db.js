@@ -11,7 +11,7 @@ const dbConnect = async () => {
     }
   )
   .then(() => {
-    console.log('Successfully connected to DATABASE: ' + process.env.DB_URL.split('/')[3])  
+    console.log('Successfully connected to DATABASE: ' /**+ process.env.DB_URL.split('/')[3]*/)  
   })
   .catch((error) => {
     console.log('Unable to connect to DATABASE');

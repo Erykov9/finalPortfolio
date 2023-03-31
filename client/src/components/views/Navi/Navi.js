@@ -1,15 +1,16 @@
 import styles from  './Navi.module.scss';
 import { NavLink } from 'react-router-dom';
 
-import { AiOutlineLogin } from 'react-icons/ai';
-import { BsPersonAdd } from 'react-icons/bs'
+// import { AiOutlineLogin } from 'react-icons/ai';
+// import { BsPersonAdd } from 'react-icons/bs'
 
 import { useState } from 'react';
 
 const projects = [
   {
     name: 'To-do list',
-    navlink: '/todolist'
+    navlink: 'https://react-project.erykov9.repl.co',
+    target: true
   },
   {
     name: 'Calculator',
@@ -18,6 +19,16 @@ const projects = [
   {
     name: 'Password generator',
     navlink: '/passwordgen'
+  },
+  {
+    name: 'Basic CRUD app',
+    navlink: 'http://crud-app.erykov9.repl.co',
+    target: true
+  },
+  {
+    name: 'PathFinder',
+    navlink: 'http://path-finder-1.erykov9.repl.co',
+    target: true
   }
 ]
 
@@ -35,7 +46,7 @@ const Navi = () => {
           <div style={{display: 'flex'}} onMouseEnter={() => setActive(true)} onMouseLeave={() => setActive(false)}>
             <span>Projects</span>
             <div className={active ? styles.root_navItems_one_dropdown : styles.none}>
-              {projects.map(project => <NavLink key={project.name} to={project.navlink}>{project.name}</NavLink>)}
+              {projects.map(project => <NavLink key={project.name} to={project.navlink} target={project.target === true ? '_blank' : ''}>{project.name}</NavLink>)}
             </div>
           </div> 
         </div>
