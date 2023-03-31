@@ -9,6 +9,16 @@
     
     &_form {
 
+      &_message {
+        text-align: center;
+        font-size: 0.8em;
+        
+        p {
+          color: $red;
+          opacity: 0.8;
+        }
+      }
+
       form {
         width: 50%;
         display: flex;

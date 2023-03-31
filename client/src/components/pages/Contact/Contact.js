@@ -1,6 +1,7 @@
 import styles from './Contact.module.scss';
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
+import { useEffect } from 'react';
 
 
 const Contact = () => {
@@ -11,12 +12,19 @@ const Contact = () => {
     country: false,
     question: false
   });
+  
+  const [sendMessage, setSendMessage] = useState(false);
+
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [age, setAge] = useState(0);
+  const [country, setCountry] = useState('');
+  const [question, setQuestion] = useState('');
 
   const formHandler = (e) => {
     e.preventDefault();
     const targetId = e.target.id;
     const value = e.target.value;
-    console.log(value)
 
     switch(targetId) {
       case 'firstname':
@@ -26,12 +34,14 @@ const Contact = () => {
             lname: false
           }))
         } else {
+          setFirstName(value);
+          setSendMessage(false);
           setForm(form => ({
             ...form,
             lname: true
           }))
         }
-        break
+        break;
 
       case 'lastname':
         if(value === '') {
@@ -40,12 +50,14 @@ const Contact = () => {
             age: false
           }))
         } else {
+          setLastName(value);
+          setSendMessage(false);
           setForm(form => ({
             ...form,
             age: true
           }))
         }
-        break
+        break;
 
       case 'age':
         if(value === '') {
@@ -54,12 +66,14 @@ const Contact = () => {
             country: false
           }))
         } else {
+          setAge(value);
+          setSendMessage(false);
           setForm(form => ({
             ...form,
             country: true
           }))
         }
-        break
+        break;
 
       case 'country':
         if(value === '') {
@@ -68,17 +82,51 @@ const Contact = () => {
             question: false
           }))
         } else {
+          setCountry(value);
+          setSendMessage(false);
           setForm(form => ({
             ...form,
             question: true
           }))
         }
-        break
+        break;
+
+      case 'question': 
+        setQuestion(value);
+        break;
+
       default: 
        setForm(form => ({
         ...form
        }))
     }
+  };
+
+  console.log(firstName, lastName, age, country, question)
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    setSendMessage(true);
+    setLastName('');
+    setAge('');
+    setCountry('');
+    setQuestion('');
+    setForm({
+      fname: true,
+      lname: false,
+      age: false,
+      country: false,
+      question: false
+    });
+
+    const result = {
+      firstName,
+      lastName,
+      age,
+      country,
+      question
+    };
   }
 
 
@@ -90,23 +138,24 @@ const Contact = () => {
       </div>
       <div className={styles.root_container}>
         <div className={styles.root_container_form}>
+          {sendMessage ? <div className={styles.root_container_form_message}><p>Thank you <strong>{firstName ? firstName : 'Stranger'}</strong> for filling this contact form. Unfortunately contact service is under maintenence.</p><p>Please contact me via social media available below.</p></div> : null}
           <form>
-            <label for='firstname'>First name</label>
-            <input type='text' id='firstname' placeholder='First name' onChange={(e) => formHandler(e)}></input>
+            <label htmlFor='firstname'>First name</label>
+            <input type='text' id='firstname' placeholder='First name'  onChange={(e) => formHandler(e)}></input>
 
-            {form.lname === true ? <><label for='lastname'>Last name</label>
+            {form.lname === true ? <><label htmlFor='lastname'>Last name</label>
             <input type='text' id='lastname' placeholder='Last name' onChange={(e) => formHandler(e)}></input></> : null}
 
-            {form.age === true ? <><label for='age'>Age</label>
+            {form.age === true ? <><label htmlFor='age'>Age</label>
             <input type='number' id='age' placeholder='Your age' onChange={(e) => formHandler(e)}></input></> : ''}
 
-            {form.country === true ? <><label for="country">Country</label>
+            {form.country === true ? <><label htmlFor="country">Country</label>
             <input type='text' id='country' placeholder='Your country' onChange={(e) => formHandler(e)}></input></> : ''}
 
-            {form.question === true ? <><label for="question">Question</label>
-            <textarea>Your question...</textarea></> : ''}
+            {form.question === true ? <><label htmlFor="question">Question</label>
+            <textarea id='question' defaultValue='Your question...' onChange={(e) => formHandler(e)}></textarea></> : ''}
             
-            {form.question === true ? <Button className='mt-3' variant='success'>SUBMIT</Button> : ''}
+            {form.question === true ? <Button className='mt-3' variant='success' type='submit' onClick={submitHandler}>SUBMIT</Button> : ''}
           </form>
         </div>
       </div>
