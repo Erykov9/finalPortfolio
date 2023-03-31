@@ -2,6 +2,7 @@
 
 .root {
   padding: 60px 0;
+  padding-bottom: 120px;
 
   &_container {
     min-height: 455px;
@@ -32,6 +33,19 @@
           border: 4px solid $dark-purple;
         }
         
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    &_container {
+      &_form {
+        form {
+          margin: 0;
+          width: 100%
+        }
       }
     }
   }

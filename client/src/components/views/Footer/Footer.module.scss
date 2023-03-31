@@ -1,47 +1,53 @@
 @import '../../../styles/settings.scss';
 
 .root {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: $dark-purple;
-  align-items: center;
-  padding: 15px;
-  height: 100px;
-
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   a, p {
     font-size: 1rem
   }
 
-  &_copyright {
+  &_absolute {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     background-color: $dark-purple;
-    p {
-      margin: auto 0;
+    align-items: center;
+    padding: 15px;
+    height: 100px;
+    &_copyright {
       background-color: $dark-purple;
-    }
-  }
-
-  &_social {
-    ul {
-      margin: 0;
-      display: flex;
-      background-color: $dark-purple;
-      li {
-        padding: 0 5px;
+      p {
+        margin: auto 0;
         background-color: $dark-purple;
-        a {
-          position: relative;
+      }
+    }
+  
+    &_social {
+      ul {
+        margin: 0;
+        display: flex;
+        background-color: $dark-purple;
+        li {
+          padding: 0 5px;
           background-color: $dark-purple;
-          i {
+          a {
+            position: relative;
             background-color: $dark-purple;
+            i {
+              background-color: $dark-purple;
+            }
           }
-        }
-        a:hover i {
-          color: $red;
-          padding-bottom: 10px;
-          border-bottom: 1px solid $red;
+          a:hover i {
+            color: $red;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $red;
+          }
         }
       }
     }
   }
+
+
 }

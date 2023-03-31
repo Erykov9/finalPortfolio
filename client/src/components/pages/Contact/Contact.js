@@ -86,7 +86,7 @@ const Contact = () => {
   return (
     <div className={styles.root}>
       <div className={styles.root_header}>
-         <h2>LET'S CONTACT</h2>
+         <h2>Let's contact!</h2>
       </div>
       <div className={styles.root_container}>
         <div className={styles.root_container_form}>

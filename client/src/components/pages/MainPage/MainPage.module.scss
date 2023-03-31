@@ -3,6 +3,8 @@
 .root {
   padding-top: 60px;
   text-align: center;
+  padding-bottom: 120px;
+
 
   &_header {
     span, h1  {
@@ -17,6 +19,28 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .root {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &_header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    p, span, strong, h1 {
+      font-size: 0.8rem;
+    }
+
+    img {
+      width: 250px;
+    }
+  }
+};
 
 @keyframes color {
   0% {

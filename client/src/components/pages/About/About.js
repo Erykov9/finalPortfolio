@@ -30,18 +30,18 @@ const About = () => {
             {/** react */}
             <div>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt='react logo'/>
-              It  was love at first sight! I'm using <strong><a href='https://reactjs.org/' rel="noreferrer" target={'_blank'}>React</a></strong> in nearly every single project.
+              <p>It  was love at first sight! I'm using <strong><a href='https://reactjs.org/' rel="noreferrer" target={'_blank'}>React</a></strong> in nearly every single project.</p>
             </div>
             {/** redux */}
             <div>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt='redux logo'/>
-              <strong><a href='https://redux.js.org/' rel="noreferrer" target={'_blank'}>Redux</a></strong>, the integral part of ReactJS.
+              <p><strong><a href='https://redux.js.org/' rel="noreferrer" target={'_blank'}>Redux</a></strong>, the integral part of ReactJS.</p>
             </div>
             {/** html/css */}
             <div>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt='html logo'/>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt='css logo'/>
-              These two gentlemen need no introduction.
+              <p>These two gentlemen need no introduction.</p>
             </div>
           </div>
         </div>
@@ -51,17 +51,17 @@ const About = () => {
             {/** nodejs */}
             <div>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt='nodejs logo'/>
-              <strong><a href='https://nodejs.org/' rel="noreferrer" target={'_blank'}>NodeJS</a></strong>, the foundation of the basics, right? Even this website is using it!
+              <p><strong><a href='https://nodejs.org/' rel="noreferrer" target={'_blank'}>NodeJS</a></strong>, the foundation of the basics, right? Even this website is using it!</p>
             </div>
             {/** expressjs */}
             <div>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt='expressjs logo'/>
-              Simplicity and reliability. Two perfect words for <strong><a href='https://expressjs.org/' rel="noreferrer" target={'_blank'}>Express</a></strong>.
+              <p> Simplicity and reliability. Two perfect words for <strong><a href='https://expressjs.org/' rel="noreferrer" target={'_blank'}>Express</a></strong>.</p>
             </div>
             {/** mongodb */}
             <div>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt='mongodb logo'/>
-              My favorite database. I would like to introduce you the <strong><a href='https://mongodb.com' rel="noreferrer" target={'_blank'}>MongoDB</a></strong>!
+              <p>My favorite database. I would like to introduce you the <strong><a href='https://mongodb.com' rel="noreferrer" target={'_blank'}>MongoDB</a></strong>!</p>
             </div>
           </div>
         </div>
@@ -69,27 +69,27 @@ const About = () => {
           <h3>Tools</h3>
           <div className={styles.root_technologies_content_icons}>
             {/** VSCode */}
-            <div>
+            <div className={styles.root_technologies_content_icons_tools}>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt='vsc logo'/>
               <strong><a href='https://code.visualstudio.com' rel="noreferrer" target={'_blank'}>VSCode</a></strong>
             </div>
             {/** webpack */}
-            <div>
+            <div className={styles.root_technologies_content_icons_tools}>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg" alt='webpack logo'/>
               <strong><a href='https://webpack.js.org/' rel="noreferrer" target={'_blank'}>Webpack</a></strong>
             </div>
             {/**  bootstrap */}
-            <div>
+            <div className={styles.root_technologies_content_icons_tools}>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt='bootstrap logo'/>
               <strong><a href='https://getbootstrap.com/' rel="noreferrer" target={'_blank'}>Bootstrap</a></strong>
             </div>
             {/** chrome devtools */}
-            <div>
+            <div className={styles.root_technologies_content_icons_tools}>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" alt='chrome logo'/>
               <strong><a href='https://www.google.com/intl/pl_pl/chrome/' rel="noreferrer" target={'_blank'}>Chrome DevTools</a></strong>
             </div>
             {/** yarn */}
-            <div>
+            <div className={styles.root_technologies_content_icons_tools}>
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/yarn/yarn-original.svg" alt='yarn logo'/>
               <strong><a href='https://yarnpkg.com/' rel="noreferrer" target={'_blank'}>Chrome DevTools</a></strong>
             </div>

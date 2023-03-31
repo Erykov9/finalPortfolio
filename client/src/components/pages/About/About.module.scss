@@ -2,6 +2,7 @@
 
 .root {
   padding-top: 60px;
+  padding-bottom: 120px;
 
   h1 {
     padding-bottom: 15px;
@@ -54,8 +55,12 @@
   &_technologies {
     padding-top: 15px;
 
+    p {
+      display: inline;
+    }
+
     img {
-      margin: 12px;
+      margin: 12px 12px 12px 0;
       width: 75px;
       transition: all 1s;
     }
@@ -65,7 +70,52 @@
     }
 
     &_content {
-      padding-bottom: 40px;
+      padding: 50px 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    p, a {
+      font-size: 0.8rem;
+    }
+
+    p {
+      display: block;
+    }
+
+    h4, h3, h2 {
+      font-size: 0.9rem;
+    }
+
+    h3::after {
+      content: '';
+      position: absolute;
+      width: 2rem;
+      height: 0.2rem;
+      background-color: $red;
+      top: 25px;
+      left: 0;
+      transition: all .7s;
+    }
+  
+    h3:hover::after {
+      width: 3.6rem
+    }
+
+    &_technologies_content {
+
+      img {
+        width: 40px;
+        margin-left: 44%;
+      }
+
+      &_icons_tools {
+        img {
+          margin-left: 30%;
+        }
+      }
     }
   }
 }

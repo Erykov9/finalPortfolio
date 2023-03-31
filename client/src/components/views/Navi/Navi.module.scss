@@ -68,7 +68,7 @@
         flex-direction: column;
         text-align: center;
         width: 60%;
-        top: 270px;
+        top: 300%;
         left: 87%;
         transform: translate(-50%, -50%);
         background-color: $dark-purple;
@@ -107,4 +107,20 @@
 
 .none {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .root {
+    a, span {
+      font-size: 0.8rem;
+    }
+
+    &_navItems {
+      &_one {
+        &_dropdown {
+          left: 75%;
+        }
+      }
+    }
+  }
 }
